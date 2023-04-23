@@ -123,12 +123,12 @@ In this step, one of the main steps is to calculate or choose the number of laps
 		>$$a_{2-con_{new}}=a_{2-strand_{new}}\times (h\times w)$$
 8. Calculation of the radial length of the low voltage winding:
 	- First, add the number of coiled strands radially (for one layer), then multiply by the radial length of each strand to calculate the radial length of each conductor, but we must be aware that we have a low voltage $L$ layer winding, so these dimensions must be as L is multiplied and added with a distance between the existing layers $(L-1)\times (space\:between\:layer)$ to calculate the thickness of the low voltage winding.
-	>$$w_{total-winding-LV}=(w\times w_{each-strand-ins})\times L + (L-1)\times (space\:between\:layer)$$
+	>$$w_{total-winding-LV}=(w\times w_{each-strand-ins})\times L + (L-1)\times (space&ensp;between&ensp;layer)$$
 - Now we have to calculate the outer and inner diameter of the low voltage winding. So we do the following:
 - We know that the effective radius of the transformer core is equal to $d_i$.
 - First, we calculate the insulation between the core and the low voltage winding. The first insulation is the oil channel, which you should refer to Table 5-7 to determine, and since we are calculating the diameter, we should multiply it by 2 and add it to $d_i$.
 - The second insulation is called cylindrical insulation, which we must choose from table 5-7 and then double it (Inner radius of low voltage winding).
-	>$$d_{inner-radius} = d_i + 2\times (oil\:duct) + 2\times (cylinder)$$
+	>$$d_{inner-radius} = d_i + 2\times (oil&ensp;duct) + 2\times (cylinder)$$
 - You need to double the calculated radial length of the low voltage coil to get its diameter (Outer radius of low voltage winding).
 	>$$d_{outer-radius}=d_{inner-radius} + 2\times w_{total-winding-LV}$$
 9. Calculation of the effective diameter between the inner and outer radius:
@@ -136,6 +136,6 @@ In this step, one of the main steps is to calculate or choose the number of laps
 10. Calculate the length of the low voltage winding:
 	>$$ L_{mean-winding-LV}=\pi \times d_{mean-avg}$$
 11. Calculation of low voltage winding resistance:
-	>$$R_{winding-LV}=\dfrac{(Specific resistance of copper)\times L_{LV}\times T_2}{a_{2-con_{new}}}$$
+	>$$R_{winding-LV}=\dfrac{(Specific&ensp;resistance&ensp;of&ensp;copper)\times L_{LV}\times T_2}{a_{2-con_{new}}}$$
 12. Calculation of copper volume of low voltage winding:
 	>$$vol_{winding-LV}=T_2\times L_{mean-winding-LV}\times a_{2-con_{new}}$$
