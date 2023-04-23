@@ -21,5 +21,5 @@ In the design of a transformer, there are variables that, in order to optimize t
 11. Insulation thickness of high voltage transformer winding.
 12. Insulation thickness of low voltage transformer winding.
 13. The ratio of the length of the window to the width of the window of the transformer core.
-
+14. "Ki" the area coefficient of the transformer core column.
 **Some of the above parameters are implicit and do not need to be changed, so we only discuss variable values.**
