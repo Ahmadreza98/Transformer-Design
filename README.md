@@ -93,7 +93,7 @@ In this step, we have to calculate the no-load current of the core, which we do 
 	>$$I_{no-load-p.u}=\dfrac{I_{no-load}}{I_{rated}}$$
 	-It can also be expressed as a percentage $$(that&ensp;number) \times 100$$
 
-Low-voltage winding (stage four)
+## Low-voltage winding (stage four)
 In this step, one of the main steps is to calculate or choose the number of laps, width, length, insulation thickness, etc., and my other parameters should be within the standard range. The steps of this section are as follows:
 1. Calculation of the number of turns of the low voltage winding:
 	- The number of rounds must be a multiple of 2. If not, we will round it to the nearest multiple of 2.
