@@ -51,3 +51,27 @@ In the first step, we must design the dimensions of the core so that we can chec
 	 > $$h_y = \dfrac{A_y}{b_y}$$
  
  ** The calculated parameters are all in meters, meters, square meters, cubic meters.**
+
+## Core loss (stage two)
+In the second step, we have to calculate the core losses. For this, we follow the following steps:
+1. Calculate the volume of the transformer core:
+	- The transformer is three-phase, so there are three columns in the core.
+	> $$vol_{core}=3\times A_i\times h_w$$
+2. Calculate the volume of the transformer yokes:
+	- The transformer has two yokes, one at the bottom and one at the top.
+	> $$vol_{yokes}=2\times A_y\times W$$
+3. Calculate total volume of core and yokes:
+	> $$vol_{total}=vol_{core} + vol_{yokes}$$
+4. Calculate the weight of the transformer core:
+	> $$ mass_{core}=vol_{core}\times (density\:of\:iron)$$
+5. Calculate the weight of the transformer yokes:
+	> $$ mass_{yokes}=vol_{yokes}\times (density\:of\:iron)$$
+6. Calculate total mass of core and yokes:
+	> $$ mass_{total} = mass_{core} + mass_{yokes}$$
+7. Calculation of iron loss per kg, including eddy current and hysteresis:
+	-This relationship is modeled on a graph.
+	> $$P_{loss}=0.85+1.5792\times (B_m-0.8)+2.8437\times (B_m-0.8)^2-0.104167\times (B_m-0.8)^3+0.78125\times(B_m-0.8)^4 $$
+8. Calculation of total iron losses:
+	- Usually, due to neglecting some parameters and variables, the total iron losses are considered to be around 5 to 7 percent more.
+	> $$P_{loss-total} = P_{loss}\times mass_{total}$$
+	> $$P_{loss-total-5\%} = P_{loss-total}\times 1.05$$
