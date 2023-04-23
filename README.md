@@ -76,3 +76,19 @@ In the second step, we have to calculate the core losses. For this, we follow th
 	> $$P_{loss-total} = P_{loss}\times mass_{total}$$
 
 	> $$P_{loss-total-suggeste} = P_{loss-total}\times (1.05&ensp;or&ensp;1.07)$$
+
+## No-load current (stage three)
+In this step, we have to calculate the no-load current of the core, which we do according to the following steps:
+1. Calculation of magnetization loss per kg, including Hysteresis:
+	>$$S_{loss} = -657.4+2084.458\times B_m-2159.68\times(B_m)^2+736.43\times(B_m)^3$$
+2. Calculation of total magnetic losses:
+	>$$S_{loss-total} = S_{loss}\times mass_{total}$$
+3. Calculation of magnetizing current:
+	>$$I_{mag}=\dfrac{S_{loss-total}}{3\times V_{high_{ph}}}$$
+4. Calculation of iron loss current:
+	>$$I_{iron}=\dfrac{P_{loss-total}}{3\times V_{high_{ph}}}$$
+5. Calculation of no-load current:
+	>$$I_{no-load}=\sqrt{I_{mag}^2+I_{iron}^2}$$
+6. Calculation of no-load current in terms of P.u:
+	>$$I_{no-load-p.u}=\dfrac{I_{no-load}}{I_{rated}}$$
+	-It can also be expressed as a percentage $$(that&ensp;number) \times 100$$
