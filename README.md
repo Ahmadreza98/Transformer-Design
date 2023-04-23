@@ -134,7 +134,7 @@ In this step, one of the main steps is to calculate or choose the number of laps
 9. Calculation of the effective diameter between the inner and outer radius:
 	 >$$d_{mean-avg}=\dfrac{d_{inner-radius}+d_{inner-radius}}{2}$$
 10. Calculate the length of the low voltage winding:
-	>$$ L_{mean-winding-LV}=\pi \times d_{mean-avg}$$
+	>$$L_{mean-winding-LV}=\pi \times d_{mean-avg}$$
 11. Calculation of low voltage winding resistance:
 	>$$R_{winding-LV}=\dfrac{(Specific&ensp;resistance&ensp;of&ensp;copper)\times L_{LV}\times T_2}{a_{2-con_{new}}}$$
 12. Calculation of copper volume of low voltage winding:
