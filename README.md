@@ -68,7 +68,7 @@ In the second step, we have to calculate the core losses. For this, we follow th
 	> $$mass_{yokes}=vol_{yokes}\times (density&ensp;of&ensp;iron)$$
 6. Calculate total mass of core and yokes:
 	> $$mass_{total} = mass_{core} + mass_{yokes}$$
-7. Calculation of iron loss per kg, including eddy current and hysteresis:
+7. Calculation of iron loss per kg, including eddy current:
 	-This relationship is modeled on a graph.
 	> $$P_{loss}=0.85+1.5792\times (B_m-0.8)+2.8437\times (B_m-0.8)^2-0.104167\times (B_m-0.8)^3+0.78125\times(B_m-0.8)^4 $$
 8. Calculation of total iron losses:
