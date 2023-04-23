@@ -92,3 +92,50 @@ In this step, we have to calculate the no-load current of the core, which we do 
 6. Calculation of no-load current in terms of P.u:
 	>$$I_{no-load-p.u}=\dfrac{I_{no-load}}{I_{rated}}$$
 	-It can also be expressed as a percentage $$(that&ensp;number) \times 100$$
+
+Low-voltage winding (stage four)
+In this step, one of the main steps is to calculate or choose the number of laps, width, length, insulation thickness, etc., and my other parameters should be within the standard range. The steps of this section are as follows:
+1. Calculation of the number of turns of the low voltage winding:
+	- The number of rounds must be a multiple of 2. If not, we will round it to the nearest multiple of 2.
+	> $$T_2=\dfrac{V_{low_{ph}}}{E_t}$$
+
+- Usually, to place the insulation and the number of turns of the low voltage winding, it is wound in two or more layers so that each one has a distance of a few millimeters from the other.
+2. Calculation of low voltage winding current:
+	>$$I_2=\dfrac{S}{3\times V_{low_{ph}}}$$
+3. Calculation of cross-section of low voltage winding:
+	>$$a_2=\dfrac{I_2}{\delta_{LV}}$$
+4. Calculation of permissible height for low voltage winding:
+	- Usually, 80% of the window height is used for low voltage and 20% is for insulation considerations.
+	>$$h_{LV}=h_w\times 0.8$$
+5. Calculate the height of each conductor in each layer:
+	> $$h_{each-con}=\dfrac{h_{LV}}{\dfrac{T_2}{L}}$$
+	- $L$ is the number of layers of the low voltage winding.
+- Usually on the low voltage side, because the calculated cross-sectional area is more than the range and cross-sectional area of standard cables, so we have to divide it into 2n strands and arrange them in a special arrangement, for example, $h$ strands in the axial length and $w$ strands in the radial length of the transformer $(h\times w = 2n)$.
+6. Calculate the thickness of each strand of wire in each conductor:
+	>$$h_{each-strand}=\dfrac{h_{each-con}}{h}$$
+- Now, in order to calculate the width of the wire string, we must refer to Table A-5, which are the standard wires that are available to us, and find the cross-section of that string (if such an axial length is not available in the table, you can change the range, but you must be careful changes in other parameters should be within their stability limits).
+	>$$table_{A-5} \to w_{each-strand}$$
+- After determining the thickness and width of the current wire, 5 mm should be added to both, which is because of the insulation on it.
+	>$$ then \to h_{each-strand}+0.5^{mm}\quad w_{each-strand}+0.5^{mm}$$
+7. Calculation of modified cross-section with $h_{each-strand-ins}$ and $w_{each-strand-ins}$ listed in table A-5:
+	>$$a_{2-strand_{new}}=h_{each-strand-ins}\times w_{each-strand-ins}$$
+	- The total cross-section of the conductor:
+		>$$a_{2-con_{new}}=a_{2-strand_{new}}\times (h\times w)$$
+8. Calculation of the radial length of the low voltage winding:
+	- First, add the number of coiled strands radially (for one layer), then multiply by the radial length of each strand to calculate the radial length of each conductor, but we must be aware that we have a low voltage $L$ layer winding, so these dimensions must be as L is multiplied and added with a distance between the existing layers $(L-1)\times (space\:between\:layer)$ to calculate the thickness of the low voltage winding.
+	>$$w_{total-winding-LV}=(w\times w_{each-strand-ins})\times L + (L-1)\times (space\:between\:layer)$$
+- Now we have to calculate the outer and inner diameter of the low voltage winding. So we do the following:
+- We know that the effective radius of the transformer core is equal to $d_i$.
+- First, we calculate the insulation between the core and the low voltage winding. The first insulation is the oil channel, which you should refer to Table 5-7 to determine, and since we are calculating the diameter, we should multiply it by 2 and add it to $d_i$.
+- The second insulation is called cylindrical insulation, which we must choose from table 5-7 and then double it (Inner radius of low voltage winding).
+	>$$d_{inner-radius} = d_i + 2\times (oil\:duct) + 2\times (cylinder)$$
+- You need to double the calculated radial length of the low voltage coil to get its diameter (Outer radius of low voltage winding).
+	>$$d_{outer-radius}=d_{inner-radius} + 2\times w_{total-winding-LV}$$
+9. Calculation of the effective diameter between the inner and outer radius:
+	 >$$d_{mean-avg}=\dfrac{d_{inner-radius}+d_{inner-radius}}{2}$$
+10. Calculate the length of the low voltage winding:
+	>$$ L_{mean-winding-LV}=\pi \times d_{mean-avg}$$
+11. Calculation of low voltage winding resistance:
+	>$$R_{winding-LV}=\dfrac{(Specific resistance of copper)\times L_{LV}\times T_2}{a_{2-con_{new}}}$$
+12. Calculation of copper volume of low voltage winding:
+	>$$vol_{winding-LV}=T_2\times L_{mean-winding-LV}\times a_{2-con_{new}}$$
