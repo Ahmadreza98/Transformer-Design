@@ -31,7 +31,7 @@ In the first step, we must design the dimensions of the core so that we can chec
  1. First, we have to calculate the cross-sectional area of the transformer core:
 	> $$ A_i = \dfrac{E_t}{4.44\times f_s \times B_m} $$
  2. Calculate the effective diameter of the transformer core:
-	 > $$ d_i = \sqrt(\dfrac{A_i}{K_i}) $$
+	 > $ d_i = \sqrt(\dfrac{A_i}{K_i}) $
  3. Calculate the area of the transformer window:
 	 > $$ A_w = \dfrac{S}{3.33\times f_s\times B_m\times A_i\times K_w\times\delta_{avg}} $$
  4. Calculate the width of the transformer core window:
