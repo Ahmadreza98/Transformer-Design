@@ -63,15 +63,15 @@ In the second step, we have to calculate the core losses. For this, we follow th
 3. Calculate total volume of core and yokes:
 	> $$vol_{total}=vol_{core} + vol_{yokes}$$
 4. Calculate the weight of the transformer core:
-	> $$ mass_{core}=vol_{core}\times (density\:of\:iron)$$
+	> $$mass_{core}=vol_{core}\times (density\:of\:iron)$$
 5. Calculate the weight of the transformer yokes:
-	> $$ mass_{yokes}=vol_{yokes}\times (density\:of\:iron)$$
+	> $$mass_{yokes}=vol_{yokes}\times (density\:of\:iron)$$
 6. Calculate total mass of core and yokes:
-	> $$ mass_{total} = mass_{core} + mass_{yokes}$$
+	> $$mass_{total} = mass_{core} + mass_{yokes}$$
 7. Calculation of iron loss per kg, including eddy current and hysteresis:
 	-This relationship is modeled on a graph.
 	> $$P_{loss}=0.85+1.5792\times (B_m-0.8)+2.8437\times (B_m-0.8)^2-0.104167\times (B_m-0.8)^3+0.78125\times(B_m-0.8)^4 $$
 8. Calculation of total iron losses:
 	- Usually, due to neglecting some parameters and variables, the total iron losses are considered to be around 5 to 7 percent more.
 	> $$P_{loss-total} = P_{loss}\times mass_{total}$$
-	> $$P_{loss-total-5\%} = P_{loss-total}\times 1.05$$
+	> $$P_{loss-total-5\%/} = P_{loss-total}\times 1.05$$
