@@ -139,3 +139,72 @@ In this step, one of the main steps is to calculate or choose the number of laps
 	>$$R_{winding-LV}=\dfrac{(Specific&ensp;resistance&ensp;of&ensp;copper)\times L_{LV}\times T_2}{a_{2-con_{new}}}$$
 12. Calculation of copper volume of low voltage winding:
 	>$$vol_{winding-LV}=T_2\times L_{mean-winding-LV}\times a_{2-con_{new}}$$
+
+## High Voltage Winding (stage five)
+At this stage, we have to design the winding of the high voltage section in such a way that it is placed inside the window, and it must be acceptable in terms of height, so we do the following steps to design the high voltage winding:
+1. Calculation of the number of high voltage winding turns:
+	- The number of turns of the high voltage winding must be a multiple of 2.	
+	>$$T_1=\dfrac{V_{high_{ph}}}{V_{low_{ph}}}\times T_2$$
+- In transformers, the number of conductor turns in the last round, both from the bottom and from the top, is usually less than the middle part of the transformer, which is for insulation considerations, etc. It should also be noted that each conductor can have a maximum of 100 strands, so we have a capacity limit.
+2. Calculate the high voltage winding of the transformer:
+	>$$T_{middle}=(number\:of\:turn)_{middle}\times (number\:of\:strand)_{each-con}$$
+	- $if\quad T_2-T_{middle} < 200\quad then\quad T_{top}=T_{bottom}=\dfrac{T_2-T_{middle}}{2}$
+3. Calculation of high voltage winding current of the transformer:
+	>$$I_1=\dfrac{S}{3\times V_{high_{ph}}}$$
+4. Calculation of the cross-section of the high voltage winding of the transformer:
+	> $$a_1=\dfrac{I_1}{\delta_{HV}}$$
+- Now we need to get its diameter from Table A-1 based on the cross-section of the winding.
+	>$$ table_{A-1} \to d_{winding-strand}$$
+- After determining the diameter of each coil in the high voltage of the transformer, we must add 3 mm to the diameter of the wire, because we must also consider the insulation on it.
+	>$$d_{winding-strand-ins} = d_{winding-strand} + 3^{mm}$$
+- Note that there may not be a wire with such a cross-section, so consider a wire with a closer cross-section and consider the new cross-section in the problem.
+5. Calculation of permissible height for high voltage winding:
+	- Usually, 70% of the height of the window is considered as the allowed height, and the remaining 30% is considered for insulation considerations.
+	>$$h_{HV}=h_w\times 0.7$$
+6. Calculation of the height of each conductor in the high voltage winding:
+	>$$h_{each-con}=\dfrac{h_{HV}}{(number\:of\:turns)_{middle}+2}$$
+	- Now we need to know how many strands of wire are placed in each conductor along its axial length. For this reason, we divide the height of each conductor by the diameter of each strand of wire with its insulation to determine the number (the desired number must be a trend number or the same number without any decimals).
+	>$$h_{number\:of\:strand_{each-con}}=\dfrac{h_{each-con}}{d_{winding-strand-ins}}$$
+	- Now we have to multiply the number of turns of the wire strand that is placed axially in each conductor by the diameter of the wire strand with insulation.
+	>$$h_{each-con_{new}}=h_{number\:of\:strand_{each-con}}\times d_{winding-strand-ins}$$
+7. Calculation of the number of wire strands in the radial axis in the high voltage winding:
+	- Now we have to calculate the number of wires in the radial axis. For this, we must divide the total number of wire strands in each conductor by the number of wire strands in the longitudinal axis to calculate the number of wire strands in the radial axis (of course, the desired number must be rounded and not include a decimal number).
+	>$$ w_{number\:of\:strand_{each-con}}=\dfrac{(number\:of\:strand)_{each-con}}{h_{number\:of\:strand_{each-con}}}$$
+8. Calculation of radial length for high voltage winding:	
+	- Now we have to multiply the number of strands of wires calculated in the radial axis by the diameter of the insulated wire to calculate the length of the radial axis.
+	>$$w_{radial-axis-winding}=w_{number\:of\:strand_{each-con}}\times d_{winding-strand-ins}$$
+9. Calculation of high voltage winding height:
+	>$$h_{total-winding_{HV}}=h_{each-con_{new}}\times [(number\:of\:turn)_{middle}+2]$$
+	- $if\quad h_{total-winding_{HV}}<h_{HV} \quad then\quad True$
+10. Calculation of total height at high voltage:
+	- It should also be noted that a spacer should be placed for each conductor, which is at least 4 mm.
+	> $$h_{ins-spacer}=4^{mm}\times [[(number\:of\:turn)_{middle}+2]-1]$$
+	- We have two end insulators, each equal to 35 mm.
+	> $$h_{ins-end}=2\times 35^{mm}$$
+	- We have a metal ring insulation which is equal to 20 mm.
+	>$$h_{ins-ring}=20^{mm}$$
+	- We also put a space filling insulation which is equal to 4 mm.
+	>$$h_{ins-slackness}=4^{mm}$$
+	- Now we collect all the above items together
+	>$$h_{total-winding-ins_{HV}}=h_{total-winding_{HV}}+h_{ins-spacer}+h_{ins-end}+h_{ins-ring}+h_{ins-slackness}$$
+	- $if \quad h_{total-winding-ins_{HV}}<h_w \quad then \quad True$
+11. Calculation of radial length of high voltage winding:
+	- Since the high voltage winding is wound on the low voltage winding, then to calculate the radial length, we must continue it from the outer layer of the low voltage. First, an oil channel must be placed between the high and low voltage windings, which according to Table 5-8 should be (Its values are diagonal, the values should be entered radially and then multiplied by 2) Then it will be added with the value of the external radial length of the low voltage axis and the inner diameter of the insulating cylinder at high pressure will be calculated.
+	>$$table_{5-8} \to w_{oil-duct_{between-LV-and-HV}}$$
+	- Now we have to calculate the thickness of the insulating cylinder. In high voltage, you should get its value from table 5-8 (if the values are not in the table, use interpolation) and add it with the value of the inner diameter of the insulating cylinder in high voltage to calculate the inner diameter of the high voltage winding.
+	>$$table_{5-8} \to w_{culinder_{between-LV-and-HV}}$$
+	>$$d_{inner-radius}=d_{outer-radius}+2\times w_{oil-duct_{between-LV-and-HV}}+ 2\times w_{culinder_{between-LV-and-HV}}$$
+	- Now add the above value with twice the thickness of the high voltage winding and call it the outer diameter of the high voltage winding.
+	>$$d_{outer-radius}=d_{inner-radius}+2\times w_{radial-axis-winding}$$
+- Finally, we must place the oil channel between the high voltage windings for non-identical phases, which is also obtained in Table 5-8.
+	>$$table_{5-8}\to w_{oil-duct-between-HV-to-HV}$$
+12. Calculation of the closeness of non-phase windings:
+	>$$d_{distance-between-HV-to-HV}=D-(d_{outer-radius}+w_{oil-duct-between-HV-to-HV})$$
+13. Calculation of the effective diameter of the high voltage winding:
+	>$$d_{mean-winding-LV}=\dfrac{d_{outer-radius}+d_{inner-radius}}{2}$$
+14. Calculation of average length of high voltage winding:
+	>$$L_{mean-winding-LV}=\pi \times d_{mean-winding-LV}$$
+15. Calculation of high voltage winding resistance:
+	>$$R_{winding-HV}=\dfrac{(Specific\:resistance\:of\:copper)\times L_{mean-winding-LV}\times T_1}{a_{1-con}}$$
+16. Calculation of high voltage winding volume:
+	>$$vol_{HV}=T_1\times L_{mean-winding-LV}\times a_{1-con}$$
