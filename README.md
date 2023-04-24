@@ -175,7 +175,7 @@ At this stage, we have to design the winding of the high voltage section in such
 	>$$w_{radial-axis-winding}=w_{number\:of\:strand_{each-con}}\times d_{winding-strand-ins}$$
 9. Calculation of high voltage winding height:
 	>$$h_{total-winding_{HV}}=h_{each-con_{new}}\times [(number\:of\:turn)_{middle}+2]$$
-	- $if\quad h_{total-winding_{HV}}<h_{HV} \quad then\quad True$
+	- $if\quad h_{total-winding_{HV}} < h_{HV} \quad then\quad True$
 10. Calculation of total height at high voltage:
 	- It should also be noted that a spacer should be placed for each conductor, which is at least 4 mm.
 	> $$h_{ins-spacer}=4^{mm}\times [[(number\:of\:turn)_{middle}+2]-1]$$
@@ -187,7 +187,7 @@ At this stage, we have to design the winding of the high voltage section in such
 	>$$h_{ins-slackness}=4^{mm}$$
 	- Now we collect all the above items together
 	>$$h_{total-winding-ins_{HV}}=h_{total-winding_{HV}}+h_{ins-spacer}+h_{ins-end}+h_{ins-ring}+h_{ins-slackness}$$
-	- $if \quad h_{total-winding-ins_{HV}}<h_w \quad then \quad True$
+	- $if \quad h_{total-winding-ins_{HV}} < h_w \quad then \quad True$
 11. Calculation of radial length of high voltage winding:
 	- Since the high voltage winding is wound on the low voltage winding, then to calculate the radial length, we must continue it from the outer layer of the low voltage. First, an oil channel must be placed between the high and low voltage windings, which according to Table 5-8 should be (Its values are diagonal, the values should be entered radially and then multiplied by 2) Then it will be added with the value of the external radial length of the low voltage axis and the inner diameter of the insulating cylinder at high pressure will be calculated.
 	>$$table_{5-8} \to w_{oil-duct_{between-LV-and-HV}}$$
