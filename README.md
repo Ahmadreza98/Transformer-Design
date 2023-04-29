@@ -208,3 +208,26 @@ At this stage, we have to design the winding of the high voltage section in such
 	>$$R_{winding-HV}=\dfrac{(Specific\:resistance\:of\:copper)\times L_{mean-winding-LV}\times T_1}{a_{1-con}}$$
 16. Calculation of high voltage winding volume:
 	>$$vol_{HV}=T_1\times L_{mean-winding-LV}\times a_{1-con}$$
+
+## Total weight and losses (stage six)
+Now we want to calculate the weight of the core and windings and calculate the amount of losses in high and low voltage windings, we must do the following steps:
+1. Calculation of low voltage winding losses, which is equal to the value of the winding resistance in the square of the current passing through that winding:
+	> $$P_{loss-copper-LV}=R_2\times I_{2}^2$$
+2. Calculation of high voltage winding losses is also done in the same way as low voltage:
+	> $$P_{loss-copper-HV}=R_1\times I_1^2$$
+3. Calculation of the total losses of the transformer winding:
+	> $$P_{total-copper}=P_{loss-copper-LV} +P_{loss-copper-HV}$$
+4. Core losses that have already been calculated and should be rewritten in this section:
+	> $$P_{loss-iron}=P_{loss-total}$$
+5. Calculate the total loss of the transformer:
+	> $$P_{total-transformers}=P_{loss-iron}+P_{total-copper}$$
+6. Calculate the weight of the low voltage winding:
+	- We need to multiply the volume of the coil by the copper density to calculate the weight of the low voltage coil.
+	>$$mass_{winding-LV}=vol_{winding-LV}\times (density\:of \:copper)$$
+7. Calculation of the weight of the high voltage winding:
+	- We need to multiply the volume of the coil by the copper density to calculate the weight of the high voltage coil.
+	>$$mass_{winding-HV}=vol_{winding-HV}\times (density\:of \:copper)$$
+8. Calculate the total weight of the winding:
+	>$$mass_{total-copper}=mass_{winding-HV}+mass_{winding-LV}$$
+9. Calculate the total weight of the transformer:
+	>$$mass_{total-transformer}=mass_{total-copper}+mass_{total-core}$$ 
