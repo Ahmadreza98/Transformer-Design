@@ -231,3 +231,22 @@ Now we want to calculate the weight of the core and windings and calculate the a
 	>$$mass_{total-copper}=mass_{winding-HV}+mass_{winding-LV}$$
 9. Calculate the total weight of the transformer:
 	>$$mass_{total-transformer}=mass_{total-copper}+mass_{total-core}$$ 
+
+## Regulation and Efficiency (stage seven)
+Now we have to check the working efficiency of the transformer in full mode with unit power factor and 0.8 after phase. Then we have to calculate the maximum efficiency for the transformer, which requires calculating the coefficient K, which is the relationship between the core losses and the copper losses, then based on that coefficient, calculate the efficiency again in the two mentioned cases. To calculate the voltage adjustment, you should check it in full mode and the power factor of the unit and post phase is 0.8.
+1. Calculation of efficiency at full load and unit power factor:
+	>$$\eta=\dfrac{S}{S+P_{loss-iron}+P_{loss-copper}}\times 100$$
+2. Calculation of efficiency at full load and post-phase power factor of 0.8:
+	>$$\eta=\dfrac{S\times0.8}{S\times0.8+P_{loss-iron}+P_{loss-copper}}\times 100$$
+3. Calculation of maximum efficiency:
+	- In order for the efficiency to be maximized, the amount of copper losses and iron losses must be equal, for which a coefficient is defined which is equal to the square root of the iron losses divided by the copper losses.
+	>$$K=\sqrt{\dfrac{P_{loss-iron}}{P_{loss-copper}}}$$
+	>$$\eta_{max}=\dfrac{K\times S}{K\times S + 2\times P_{loss-iron}}\times 100$$
+4. Calculation of the maximum efficiency with a power factor of 0.8:
+	>$$\eta_{max}=\dfrac{K\times S\times 0.8}{K\times S\times 0.8 + 2\times P_{loss-iron}}\times 100$$
+5. Calculation of voltage regulation:
+	- We need to know whether the power factor is unit or not. If it is a unit and the load is full, its value is equal to the resistance of the unit at 100 which is calculated on the primary side.
+	>$$V_R=\dfrac{I\times(R\times cos(\phi)-X\times sin(\phi))}{V}$$
+	> $if\quad \phi=0\quad then \to V_R=R_{p.u}$
+	- Now we assume that the power factor is 0.8 lead phase:
+	> $if\quad \phi=-0.8\quad then \to V_R=R_{p.u}\times 0.8 + X_{p.u}\times0.6$
