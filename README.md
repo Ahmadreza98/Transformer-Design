@@ -48,7 +48,7 @@ In the first step, we must design the dimensions of the core so that we can chec
  9. Calculate the width of the transformer yoke:
 	> $$b_y = 0.9\times d_i$$
  10. Calculate the height of the transformer yoke:
-	 > $$h_y = \dfrac{A_y}{b_y}$$
+	> $$h_y = \dfrac{A_y}{b_y}$$
  
  **The calculated parameters are all in meters, meters, square meters, cubic meters.**
 
@@ -116,7 +116,7 @@ In this step, one of the main steps is to calculate or choose the number of laps
 - Now, in order to calculate the width of the wire string, we must refer to Table A-5, which are the standard wires that are available to us, and find the cross-section of that string (if such an axial length is not available in the table, you can change the range, but you must be careful changes in other parameters should be within their stability limits).
 	>$$table_{A-5} \to w_{each-strand}$$
 - After determining the thickness and width of the current wire, 5 mm should be added to both, which is because of the insulation on it.
-	>$$ then \to h_{each-strand}+0.5^{mm}\quad w_{each-strand}+0.5^{mm}$$
+	>$$then \to h_{each-strand}+0.5^{mm}\quad w_{each-strand}+0.5^{mm}$$
 7. Calculation of modified cross-section with $h_{each-strand-ins}$ and $w_{each-strand-ins}$ listed in table A-5:
 	>$$a_{2-strand_{new}}=h_{each-strand-ins}\times w_{each-strand-ins}$$
 	- The total cross-section of the conductor:
@@ -132,7 +132,7 @@ In this step, one of the main steps is to calculate or choose the number of laps
 - You need to double the calculated radial length of the low voltage coil to get its diameter (Outer radius of low voltage winding).
 	>$$d_{outer-radius}=d_{inner-radius} + 2\times w_{total-winding-LV}$$
 9. Calculation of the effective diameter between the inner and outer radius:
-	 >$$d_{mean-avg}=\dfrac{d_{inner-radius}+d_{inner-radius}}{2}$$
+	>$$d_{mean-avg}=\dfrac{d_{inner-radius}+d_{inner-radius}}{2}$$
 10. Calculate the length of the low voltage winding:
 	>$$L_{mean-winding-LV}=\pi \times d_{mean-avg}$$
 11. Calculation of low voltage winding resistance:
