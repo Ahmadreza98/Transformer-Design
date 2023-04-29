@@ -144,17 +144,17 @@ In this step, one of the main steps is to calculate or choose the number of laps
 At this stage, we have to design the winding of the high voltage section in such a way that it is placed inside the window, and it must be acceptable in terms of height, so we do the following steps to design the high voltage winding:
 1. Calculation of the number of high voltage winding turns:
 	- The number of turns of the high voltage winding must be a multiple of 2.	
-	>$$T_1=\dfrac{V_{high_{ph}}}{V_{low_{ph}}}\times T_2$$
+	> $$T_1=\dfrac{V_{high_{ph}}}{V_{low_{ph}}}\times T_2$$
 - In transformers, the number of conductor turns in the last round, both from the bottom and from the top, is usually less than the middle part of the transformer, which is for insulation considerations, etc. It should also be noted that each conductor can have a maximum of 100 strands, so we have a capacity limit.
 2. Calculate the high voltage winding of the transformer:
-	>$$T_{middle}=(number\:of\:turn)_{middle}\times (number\:of\:strand)_{each-con}$$
+	> $$T_{middle}=number&ensp;of&ensp;turn_{middle}\times number&ensp;of&ensp;strand_{each-con}$$
 	- $if\quad T_2-T_{middle} < 200\quad then\quad T_{top}=T_{bottom}=\dfrac{T_2-T_{middle}}{2}$
 3. Calculation of high voltage winding current of the transformer:
 	>$$I_1=\dfrac{S}{3\times V_{high_{ph}}}$$
 4. Calculation of the cross-section of the high voltage winding of the transformer:
-	> $$a_1=\dfrac{I_1}{\delta_{HV}}$$
+	>$$a_1=\dfrac{I_1}{\delta_{HV}}$$
 - Now we need to get its diameter from Table A-1 based on the cross-section of the winding.
-	>$$ table_{A-1} \to d_{winding-strand}$$
+	>$$table_{A-1} \to d_{winding-strand}$$
 - After determining the diameter of each coil in the high voltage of the transformer, we must add 3 mm to the diameter of the wire, because we must also consider the insulation on it.
 	>$$d_{winding-strand-ins} = d_{winding-strand} + 3^{mm}$$
 - Note that there may not be a wire with such a cross-section, so consider a wire with a closer cross-section and consider the new cross-section in the problem.
@@ -169,16 +169,16 @@ At this stage, we have to design the winding of the high voltage section in such
 	>$$h_{each-con_{new}}=h_{number\:of\:strand_{each-con}}\times d_{winding-strand-ins}$$
 7. Calculation of the number of wire strands in the radial axis in the high voltage winding:
 	- Now we have to calculate the number of wires in the radial axis. For this, we must divide the total number of wire strands in each conductor by the number of wire strands in the longitudinal axis to calculate the number of wire strands in the radial axis (of course, the desired number must be rounded and not include a decimal number).
-	>$$ w_{number\:of\:strand_{each-con}}=\dfrac{(number\:of\:strand)_{each-con}}{h_{number\:of\:strand_{each-con}}}$$
+	>$$w_{number&ensp;of&ensp;strand_{each-con}}=\dfrac{number&ensp;of&ensp;strand_{each-con}}{h_{number&ensp;of&ensp;strand_{each-con}}}$$
 8. Calculation of radial length for high voltage winding:	
 	- Now we have to multiply the number of strands of wires calculated in the radial axis by the diameter of the insulated wire to calculate the length of the radial axis.
-	>$$w_{radial-axis-winding}=w_{number\:of\:strand_{each-con}}\times d_{winding-strand-ins}$$
+	>$$w_{radial-axis-winding}=w_{number&ensp;of&ensp;strand_{each-con}}\times d_{winding-strand-ins}$$
 9. Calculation of high voltage winding height:
-	>$$h_{total-winding_{HV}}=h_{each-con_{new}}\times [(number\:of\:turn)_{middle}+2]$$
+	>$$h_{total-winding_{HV}}=h_{each-con_{new}}\times [(number&ensp;of&ensp;turn)_{middle}+2]$$
 	- $if\quad h_{total-winding_{HV}} < h_{HV} \quad then\quad True$
 10. Calculation of total height at high voltage:
 	- It should also be noted that a spacer should be placed for each conductor, which is at least 4 mm.
-	> $$h_{ins-spacer}=4^{mm}\times [[(number\:of\:turn)_{middle}+2]-1]$$
+	> $$h_{ins-spacer}=4^{mm}\times [[(number&ensp;of&ensp;turn)_{middle}+2]-1]$$
 	- We have two end insulators, each equal to 35 mm.
 	> $$h_{ins-end}=2\times 35^{mm}$$
 	- We have a metal ring insulation which is equal to 20 mm.
