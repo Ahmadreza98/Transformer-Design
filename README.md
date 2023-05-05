@@ -1,5 +1,5 @@
 # Transformer-Design
-In this repository, I intend to design the transformer in the electrical machine design course, which is part of the electrical engineering courses in the master's degree.
+In this repository, I intend to design the transformer in the electrical machine design course, which is part of the electrical engineering courses in the master's degree, And every effort has been made to code this process with the help of Python programming language and improve it in the hope of a smart world.
 ## Introduction
 To design the transformer based on the information provided by the employer, the transformer must be designed, which includes:
 1. The primary voltage of the transformer.
