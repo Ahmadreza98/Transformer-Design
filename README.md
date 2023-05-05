@@ -250,3 +250,20 @@ Now we have to check the working efficiency of the transformer in full mode with
 	> $if\quad \phi=0\quad then \to V_R=R_{p.u}$
 	- Now we assume that the power factor is 0.8 lead phase:
 	> $if\quad \phi=-0.8\quad then \to V_R=R_{p.u}\times 0.8 + X_{p.u}\times0.6$
+
+## Impedance (stage eight)
+In this section, we have to calculate the leakage reactance, which is one of the most complicated parts of the transformer calculation, but in this section, we assume several variables to be constant for the simplicity of the calculations. To calculate the impedance, we do the steps in order.
+1. Calculate the average length of high and low voltage:
+	> $$L_{mt}=\dfrac{L_{mean-winding-LV}+L_{mean-winding-HV}}{2}$$
+2. Calculation of ampere turns for each phase of the transformer:
+	> $$(AT)=T_1^*\times I_1$$
+3. Calculation of the axial length of the transformer core:
+	> $$h_{ax}=h_w-(h_{end-insulate}+h_{ring-metal-iron})$$
+4. Calculate the thickness of insulating cylinder and oil channel between high and low voltage:
+	> $$w_{radial-width-LV-HV}=\dfrac{dia_{inner-winding-HV}-dia_{outer-winding-LV}}{2}$$
+5. Calculation of reactance per unit:
+	> $$\varepsilon_{x}=\dfrac{2\pi f_s \mu_{0} L_{mt}(AT)}{h_{ax}E_t}\times (w_{radial-width-LV-HV}+\dfrac{w_{total-winding-LV}+w_{total-winding-HV}}{3})$$
+6. Calculation of resistance per unit:
+	> $$\varepsilon_{r}=\dfrac{P_{iron-loss}}{S}$$
+7. Calculation of leakage impedance per unit:
+	> $$\varepsilon_{z}=\sqrt{(\varepsilon_{x})^2+(\varepsilon_{r})^2}$$
